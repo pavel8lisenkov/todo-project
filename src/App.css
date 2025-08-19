@@ -1,0 +1,14 @@
+.navbar.is-light {
+	border: 2px solid #dbdbdb; /* светло-серая рамка */
+	border-radius: 8px; /* скруглённые углы */
+	margin-bottom: 1rem; /* отступ снизу */
+	padding: 0.5rem 1rem; /* внутренние отступы */
+}
+
+section {
+	border: 2px solid #dbdbdb; /* рамка */
+	border-radius: 8px;
+	padding: 1rem;
+	margin-bottom: 1.5rem; /* отступ между блоками */
+	background: #fff; /* фон */
+}
