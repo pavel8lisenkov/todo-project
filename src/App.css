@@ -1,3 +1,12 @@
+body {
+	background: linear-gradient(to bottom, #87a8c3, #dfe9f3);
+	min-height: 100vh;
+	font-family: 'Segoe UI', sans-serif;
+	margin: 0; /* убираем дефолтные браузерные отступы */
+	padding: 1.5rem 2rem; /* внутренние отступы */
+	box-sizing: border-box; /* чтобы padding не ломал ширину */
+}
+
 .navbar.is-light {
 	border: 2px solid #dbdbdb; /* светло-серая рамка */
 	border-radius: 8px; /* скруглённые углы */

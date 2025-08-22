@@ -1,39 +1,54 @@
-.todo-image {
-	display: block;
-	max-width: 100%;
-	max-height: 200px; /* ограничение по высоте */
-	width: auto;
-	height: auto;
+/* Карточка задачи */
+.todo-item {
+	background-color: #2c2c2c;
+	margin-bottom: 0.5rem;
+	padding: 0.75rem 1rem;
 	border-radius: 8px;
-	object-fit: contain;
-}
-
-* Общие стили для строк таблицы */ tr {
-	border: 1px solid #dbdbdb; /* рамка вокруг каждой задачи */
-	border-radius: 6px;
-	margin-bottom: 0.5rem; /* отступ между задачами */
-	display: table-row; /* сохраняем таблицу */
-	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	transition: background 0.2s;
 }
 
-/* При наведении */
-tr:hover {
-	background-color: #f0f8ff; /* лёгкий голубой фон */
+.todo-item:hover {
+	background-color: #3a3a3a;
 }
 
-/* Для выполненных задач */
-tr.done {
-	background-color: #e0ffe0; /* светло-зелёный фон */
+/* Содержимое */
+.todo-content {
+	display: flex;
+	flex-direction: column;
+	color: #f5f5f5;
+	flex: 1;
 }
 
-/* Ячейки */
-td {
-	padding: 0.75rem 1rem;
-	vertical-align: middle;
+/* Заголовок */
+.todo-title {
+	font-weight: 600;
+	font-size: 1rem;
+	color: #fff;
+	margin-bottom: 0.25rem;
 }
 
-/* Разделитель между строками */
-tr + tr {
-	margin-top: 0.5rem;
+/* Подзаголовок */
+.todo-desc {
+	font-size: 0.85rem;
+	color: #aaa;
+}
+
+/* Блок кнопок */
+.todo-buttons {
+	display: flex;
+	align-items: center;
+	margin-left: 1rem;
+}
+
+.todo-buttons button {
+	margin-left: 0.5rem;
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

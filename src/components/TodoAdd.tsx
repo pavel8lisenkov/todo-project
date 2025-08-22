@@ -1,12 +1,15 @@
 import type { ChangeEvent, FormEvent } from 'react';
 import { useState } from 'react';
-import type { Todo } from './todos';
+import type { Todo } from '../todos';
+import { todos as initialTodos } from '../todos';
 
-interface TodoAddProps {
-	add: (todo: Todo) => void;
-}
+const TodoAdd = () => {
+	const [todos, setTodos] = useState(initialTodos);
 
-const TodoAdd: React.FC<TodoAddProps> = props => {
+	const add = (newTodo: Todo): void => {
+		setTodos([...todos, newTodo]);
+	};
+
 	const [title, setTitle] = useState<string>('');
 	const [desc, setDesc] = useState<string>('');
 	const [image, setImage] = useState<string>('');
@@ -37,7 +40,7 @@ const TodoAdd: React.FC<TodoAddProps> = props => {
 			createdAt: date.toLocaleString(),
 			key: date.getTime(),
 		};
-		props.add(newTodo);
+		add(newTodo);
 		evt.currentTarget.reset();
 		setTitle('');
 		setDesc('');
@@ -107,7 +110,7 @@ const TodoAdd: React.FC<TodoAddProps> = props => {
 						{' '}
 						<input
 							type='reset'
-							className='button is-warning is-light'
+							className='button is-danger is-light'
 							value='Сброс'
 						/>{' '}
 					</div>
@@ -115,7 +118,7 @@ const TodoAdd: React.FC<TodoAddProps> = props => {
 						{' '}
 						<input
 							type='submit'
-							className='button is-primary'
+							className='button is-success'
 							value='Создать дело'
 						/>
 					</div>
